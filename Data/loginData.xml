@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Automation>
+
+	<user>
+		<browsername>Chrome</browsername>
+		<browsertype>default</browsertype>
+		<url>https://www.saucedemo.com/</url>
+		<username1>standard_user</username1>
+		<pass>secret_sauce</pass>
+	</user>
+
+	<user>
+		<browsername>Chrome</browsername>
+		<browsertype>default</browsertype>
+		<url>https://www.saucedemo.com/</url>
+		<username1>locked_out_user</username1>
+		<pass>secret_sauce</pass>
+	</user>
+
+	<user>
+		<browsername>Chrome</browsername>
+		<browsertype>default</browsertype>
+		<url>https://www.saucedemo.com/</url>
+		<username1>
+			problem_user
+		</username1>
+		<pass>secret_sauce</pass>
+	</user>
+
+	<user>
+		<browsername>Chrome</browsername>
+		<browsertype>default</browsertype>
+		<url>https://www.saucedemo.com/</url>
+		<username1>performance_glitch_user</username1>
+		<pass>secret_sauce</pass>
+	</user>
+
+</Automation>
