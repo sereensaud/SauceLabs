@@ -49,6 +49,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="TrxerConsole, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\TrxToHtml.TrxerConsole.1.0.0\lib\TrxerConsole.exe</HintPath>
+    </Reference>
     <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Selenium.WebDriver.4.1.0\lib\net47\WebDriver.dll</HintPath>
     </Reference>
@@ -60,6 +63,7 @@
     <Compile Include="Core\Assert.cs" />
     <Compile Include="Core\BrowserFactory.cs" />
     <Compile Include="Core\ElementAction.cs" />
+    <Compile Include="Core\Serialization.cs" />
     <Compile Include="Core\Snapshots.cs" />
     <Compile Include="Reports\Class1.cs" />
     <Compile Include="TestExecution.cs" />
@@ -74,6 +78,7 @@
   <ItemGroup>
     <Content Include="Data\loginData.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

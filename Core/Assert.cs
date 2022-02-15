@@ -10,7 +10,7 @@ namespace SauceLabs
 {
     public class Asserts
     {
-       // By username_Locator = By.ClassName("title");
+      
     
         public void Verification(IWebDriver driver,string locatorval,string message)
         {

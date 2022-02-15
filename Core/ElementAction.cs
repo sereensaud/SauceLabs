@@ -20,7 +20,30 @@ namespace SauceLabs
             {
                 driver.FindElement(element).SendKeys(value);
             }
-
+            if (elementtype == "xpath")
+            {
+                driver.FindElement(element).SendKeys(value);
+            }
+            if (elementtype == "className")
+            {
+                driver.FindElement(element).SendKeys(value);
+            }
+            if (elementtype == "cssSelector")
+            {
+                driver.FindElement(element).SendKeys(value);
+            }
+            if (elementtype == "LinkText")
+            {
+                driver.FindElement(element).SendKeys(value);
+            }
+            if (elementtype == "PartialLinkText")
+            {
+                driver.FindElement(element).SendKeys(value);
+            }
+            if (elementtype == "tagName")
+            {
+                driver.FindElement(element).SendKeys(value);
+            }
         }
         public void ClickItem(IWebDriver driver, By element, string elementtype)
         {
@@ -29,6 +52,30 @@ namespace SauceLabs
                 driver.FindElement(element).Click();
             }
             if (elementtype == "Name")
+            {
+                driver.FindElement(element).Click();
+            }
+            if (elementtype == "xpath")
+            {
+                driver.FindElement(element).Click();
+            }
+            if (elementtype == "className")
+            {
+                driver.FindElement(element).Click();
+            }
+            if (elementtype == "cssSelector")
+            {
+                driver.FindElement(element).Click();
+            }
+            if (elementtype == "LinkText")
+            {
+                driver.FindElement(element).Click();
+            }
+            if (elementtype == "PartialLinkText")
+            {
+                driver.FindElement(element).Click();
+            }
+            if (elementtype == "tagName")
             {
                 driver.FindElement(element).Click();
             }

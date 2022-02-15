@@ -18,7 +18,7 @@ namespace SauceLabs
             get { return instance; }
         }
 
-        [TestMethod]
+        [TestMethod, TestCategory("Login"),TestCategory("Positive"),TestCategory("xml")]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"D:\OneDrive - Constellation HomeBuilder Systems\VSprojects\SauceLabs\Data\loginData.xml", "user", DataAccessMethod.Sequential)]
         public void TestMethod_Login()
         {
@@ -38,7 +38,10 @@ namespace SauceLabs
             POMassert.Verification(browserfactory.driver, "title", "PRODUCTS");
             Snapshots POMsnapshots = new Snapshots();
             POMsnapshots.screenshot(browserfactory.driver);
-            browserfactory.driver.Close(); 
+            browserfactory.driver.Close();
+            browserfactory.driver.Dispose();
+            browserfactory.driver.Quit();
+            
         }
 
 
