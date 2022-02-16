@@ -31,7 +31,7 @@ namespace SauceLabs
 
                     driver = new ChromeDriver(chromeOptions);
                 }
-                driver.Manage().Window.Size = new Size(1920, 1080);
+                driver.Manage().Window.Maximize();
                 driver.Manage().Cookies.DeleteAllCookies();
             }
             else if (browsername.Equals("Edge"))

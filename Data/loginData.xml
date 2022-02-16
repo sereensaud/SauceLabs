@@ -9,15 +9,15 @@
 		<pass>secret_sauce</pass>
 	</user>
 
-	<user>
+	<user2>
 		<browsername>Chrome</browsername>
 		<browsertype>default</browsertype>
 		<url>https://www.saucedemo.com/</url>
 		<username1>locked_out_user</username1>
 		<pass>secret_sauce</pass>
-	</user>
+	</user2>
 
-	<user>
+	<user2>
 		<browsername>Chrome</browsername>
 		<browsertype>default</browsertype>
 		<url>https://www.saucedemo.com/</url>
@@ -25,14 +25,14 @@
 			problem_user
 		</username1>
 		<pass>secret_sauce</pass>
-	</user>
+	</user2>
 
-	<user>
+	<user2>
 		<browsername>Chrome</browsername>
 		<browsertype>default</browsertype>
 		<url>https://www.saucedemo.com/</url>
 		<username1>performance_glitch_user</username1>
 		<pass>secret_sauce</pass>
-	</user>
+	</user2>
 
 </Automation>

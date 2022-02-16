@@ -29,19 +29,8 @@ namespace SauceLabs
             string password = TestContext.DataRow["pass"].ToString();
             Factory browserfactory = new Factory();
             browserfactory.BrowserFactory(browsername, browsertype);
-            browserfactory.driver.Url=url;
-            LoginPage POMloginPage = new LoginPage();
-            POMloginPage.EnterUserName(browserfactory.driver,user);
-            POMloginPage.EnterPassword(browserfactory.driver,password);
-            POMloginPage.ClickLogin(browserfactory.driver);
-            Asserts POMassert = new Asserts();
-            POMassert.Verification(browserfactory.driver, "title", "PRODUCTS");
-            Snapshots POMsnapshots = new Snapshots();
-            POMsnapshots.screenshot(browserfactory.driver);
-            browserfactory.driver.Close();
-            browserfactory.driver.Dispose();
-            browserfactory.driver.Quit();
-            
+            LoginTest loginTest = new LoginTest(browserfactory.driver);
+            loginTest.logintestauth(url, user, password);
         }
 
 

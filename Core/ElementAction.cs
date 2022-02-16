@@ -112,7 +112,11 @@ namespace SauceLabs
 
             }
         }
-
+        public void ScrollPage(IWebDriver driver)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollTo(0,  document.body.scrollHeight);");//scrolls till end of page
+        }
 
     }
 }
