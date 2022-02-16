@@ -11,10 +11,7 @@ namespace SauceLabs
 
     {
         By username_Locator = By.Id("user-name");
-        //string username_keys = "standard_user";
-
         By password_Locator = By.Id("password");
-       // string password_keys = "secret_sauce";
         By loginbutton_Locator = By.Id("login-button");
 
         string elementtypeid = "Id";

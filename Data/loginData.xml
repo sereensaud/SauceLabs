@@ -34,5 +34,13 @@
 		<username1>performance_glitch_user</username1>
 		<pass>secret_sauce</pass>
 	</user2>
+	<product>
+		<browsername>Chrome</browsername>
+		<browsertype>default</browsertype>
+		<url>https://www.saucedemo.com/</url>
+		<username1>standard_user</username1>
+		<pass>secret_sauce</pass>
+	</product>
+	
 
 </Automation>

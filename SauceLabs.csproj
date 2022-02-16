@@ -71,7 +71,9 @@
     <Compile Include="WebApp\Login\LoginLocators.cs" />
     <Compile Include="WebApp\Login\LoginPage.cs" />
     <Compile Include="WebApp\Login\LoginTest.cs" />
+    <Compile Include="WebApp\Product\ProductLocators.cs" />
     <Compile Include="WebApp\Product\ProductPage.cs" />
+    <Compile Include="WebApp\Product\ProductTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

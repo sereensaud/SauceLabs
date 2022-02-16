@@ -18,7 +18,7 @@ namespace SauceLabs
             get { return instance; }
         }
 
-        [TestMethod, TestCategory("Login"),TestCategory("Positive"),TestCategory("xml")]
+        [TestMethod, TestCategory("Login"),TestCategory("xml")]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"D:\OneDrive - Constellation HomeBuilder Systems\VSprojects\SauceLabs\Data\loginData.xml", "user", DataAccessMethod.Sequential)]
         public void TestMethod_Login()
         {
@@ -33,6 +33,19 @@ namespace SauceLabs
             loginTest.logintestauth(url, user, password);
         }
 
-
+        [TestMethod, TestCategory("Product"),TestCategory("xml")]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"D:\OneDrive - Constellation HomeBuilder Systems\VSprojects\SauceLabs\Data\loginData.xml", "product", DataAccessMethod.Sequential)]
+        public void TestMethod_Product()
+        {
+            string browsername = TestContext.DataRow["browsername"].ToString();
+            string browsertype = TestContext.DataRow["browsertype"].ToString();
+            string url = TestContext.DataRow["url"].ToString();
+            string user = TestContext.DataRow["username1"].ToString();
+            string password = TestContext.DataRow["pass"].ToString();
+            Factory browserfactory = new Factory();
+            browserfactory.BrowserFactory(browsername, browsertype);
+            ProductTest productTest = new ProductTest(browserfactory.driver); //object of Product test with parameterized constructor
+            productTest.AddtoCart(url,user, password);
+        }
     }
 }
