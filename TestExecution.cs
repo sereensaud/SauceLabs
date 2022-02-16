@@ -29,7 +29,7 @@ namespace SauceLabs
             string password = TestContext.DataRow["pass"].ToString();
             Factory browserfactory = new Factory();
             browserfactory.BrowserFactory(browsername, browsertype);
-            LoginTest loginTest = new LoginTest(browserfactory.driver);
+            LoginTest loginTest = new LoginTest(browserfactory.driver); //object of loginTest
             loginTest.logintestauth(url, user, password);
         }
 
