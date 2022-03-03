@@ -10,8 +10,13 @@ namespace SauceLabs
 {
     public class Asserts
     {
-      
-    
+        #region Assertion on the basis of equal value comparison
+        /// <summary>
+        /// this method compares the expected value with actual value
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="locatorval"></param>
+        /// <param name="message"></param>
         public void Verification(IWebDriver driver,string locatorval,string message)
         {
 
@@ -19,7 +24,7 @@ namespace SauceLabs
             Assert.AreEqual(message, text);
             Console.WriteLine(text);
         }
+        #endregion
 
-   
     }
 }

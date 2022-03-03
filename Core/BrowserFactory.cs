@@ -14,8 +14,14 @@ namespace SauceLabs
     public class Factory
     {
         public IWebDriver driver;
+        /// <summary>
+        /// this method is to get browsername and its type.
+        /// </summary>
+        /// <param name="browsername"></param>
+        /// <param name="browsertype"></param>
         public void BrowserFactory(String browsername, string browsertype)
         {
+            #region Chrome Browser 
             if (browsername.Equals("Chrome"))
             {
                 if (browsertype.Equals("default"))
@@ -34,6 +40,8 @@ namespace SauceLabs
                 driver.Manage().Window.Maximize();
                 driver.Manage().Cookies.DeleteAllCookies();
             }
+            #endregion
+            #region Edge browser
             else if (browsername.Equals("Edge"))
             {
                 if (browsertype.Equals("default"))
@@ -52,6 +60,8 @@ namespace SauceLabs
                 driver.Manage().Window.Size = new Size(1920, 1080);
                 driver.Manage().Cookies.DeleteAllCookies();
             }
+            #endregion
+            #region firfox browser
             else if (browsername.Equals("Firefox"))
             {
                 if (browsertype.Equals("default"))
@@ -70,6 +80,7 @@ namespace SauceLabs
                 driver.Manage().Window.Size = new Size(1920, 1080);
                 driver.Manage().Cookies.DeleteAllCookies();
             }
+            #endregion
         }
     }
 }

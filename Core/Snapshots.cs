@@ -9,8 +9,11 @@ namespace SauceLabs
 {
     public class Snapshots
     {
-      
-
+        #region screenshot and save it
+        /// <summary>
+        /// this takes the screenshot of the point where driver is and saves it
+        /// </summary>
+        /// <param name="driver"></param>
         public void screenshot(IWebDriver driver)
 
 
@@ -24,5 +27,6 @@ namespace SauceLabs
 
 
         }
+        #endregion
     }
 }

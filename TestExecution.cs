@@ -10,6 +10,7 @@ namespace SauceLabs
     public class TestExecution
 
     {
+        #region Preliminaries
         public TestContext instance;
 
         public TestContext TestContext
@@ -17,7 +18,8 @@ namespace SauceLabs
             set { instance = value; }
             get { return instance; }
         }
-
+        #endregion
+        #region Login TestCase
         [TestMethod, TestCategory("Login"),TestCategory("xml")]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"D:\OneDrive - Constellation HomeBuilder Systems\VSprojects\SauceLabs\Data\loginData.xml", "user", DataAccessMethod.Sequential)]
         public void TestMethod_Login()
@@ -32,7 +34,8 @@ namespace SauceLabs
             LoginTest loginTest = new LoginTest(browserfactory.driver); //object of loginTest
             loginTest.logintestauth(url, user, password);
         }
-
+        #endregion
+        #region AddToCart TestCase
         [TestMethod, TestCategory("Product"),TestCategory("xml")]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", @"D:\OneDrive - Constellation HomeBuilder Systems\VSprojects\SauceLabs\Data\loginData.xml", "product", DataAccessMethod.Sequential)]
         public void TestMethod_Product()
@@ -47,5 +50,7 @@ namespace SauceLabs
             ProductTest productTest = new ProductTest(browserfactory.driver); //object of Product test with parameterized constructor
             productTest.AddtoCart(url,user, password);
         }
+        #endregion
+
     }
 }
