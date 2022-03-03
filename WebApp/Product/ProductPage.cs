@@ -9,7 +9,7 @@ namespace SauceLabs
 {
     public partial class ProductPage
     {
-        #region Preliminaries
+        #region Preliminary
         ElementAction elementAction = new ElementAction();
         #endregion
         #region Click on the Product to Add in the cart
